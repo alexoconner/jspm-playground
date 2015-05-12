@@ -2,6 +2,7 @@ System.config({
   "baseURL": "/",
   "transpiler": "babel",
   "babelOptions": {
+    "blacklist": [],
     "optional": [
       "runtime"
     ]
@@ -121,4 +122,3 @@ System.config({
     }
   }
 });
-

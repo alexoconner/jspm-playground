@@ -10,40 +10,25 @@ class View extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = {
-            route: 'home',
-            view: <HomeView />
-        };
     }
-
-    views() {
-
-        switch (this.state.route) {
-            case 'home':
-                this.setState({
-                    view: <HomeView />
-                });
-                break;
-            case 'about':
-                this.setState({
-                    view: <AboutView />
-                });
-                break;
-            default:
-                this.setState({
-                    view: <HomeView />
-                })
-        }
-
-    }
-
 
     render() {
-        //this.views();
+        var view;
+
+        switch (this.props.view) {
+            case 'home':
+                view = <HomeView />;
+                break;
+            case 'about':
+                view = <AboutView />;
+                break;
+            default:
+                view = <HomeView />;
+        }
 
         return (
             <div>
-                { this.state.view }
+                { view }
             </div>
         )
     }

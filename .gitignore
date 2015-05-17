@@ -2,3 +2,4 @@
 .idea/
 jspm_packages/
 node_modules/
+app/components/
